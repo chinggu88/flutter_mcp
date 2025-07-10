@@ -1,3 +1,12 @@
+import mcp
+
+def create_flutter_struct_prompt(code: str) -> str:
+    """
+    Flutter 프로젝트 폴더 구조 검토를 위한 프롬프트를 생성합니다.
+    """
+    return f"""
+    """
+
 def create_flutter_style_prompt(code: str) -> str:
     """
     Flutter/Dart 코드 스타일 검토를 위한 프롬프트를 생성합니다.
