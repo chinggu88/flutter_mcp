@@ -1,8 +1,8 @@
 from fastmcp import FastMCP
 
-from flutter_style import register_resources
-from flutter_tools import register_tools
-from general_style_prompt import register_prompt
+from resources.flutter_style import register_resources
+from tools.flutter_tools import register_tools
+from prompts.general_style_prompt import register_prompt
 # FastMCP 서버 인스턴스 생성
 mcp = FastMCP("Cuunit_mcp")
 

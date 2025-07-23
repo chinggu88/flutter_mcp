@@ -25,6 +25,11 @@ cd fastmcp-style-enforcer
 python src/server.py
 ```
 
+### 클로드 설치
+```bash
+fastmcp install claude-code server.py
+```
+
 ### 테스트 실행
 
 ```bash
