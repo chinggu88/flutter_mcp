@@ -59,15 +59,11 @@ lib/
 │   │       ├── custom_text_field.dart
 │   │       └── loading_widget.dart
 │   ├── data/                     # 데이터 계층
-│   │   ├── providers/            # API 통신
-│   │   │   ├── auth_provider.dart
-│   │   │   └── user_provider.dart
+│   │   ├── services/            # API 통신
+│   │   │   ├── api_service.dart
 │   │   ├── repositories/         # 데이터 처리 로직
 │   │   │   ├── auth_repository.dart
 │   │   │   └── user_repository.dart
-│   │   └── services/             # 외부 서비스
-│   │       ├── storage_service.dart
-│   │       └── notification_service.dart
 │   ├── routes/                   # 라우팅
 │   │   ├── app_pages.dart
 │   │   └── app_routes.dart

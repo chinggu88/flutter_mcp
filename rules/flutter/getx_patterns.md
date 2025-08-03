@@ -1,7 +1,4 @@
 # GetX 패턴 규칙 (GetX Patterns)
-
-
-
 ```dart
   // 1. 의존성 주입
   static UserController to = Get.find();
