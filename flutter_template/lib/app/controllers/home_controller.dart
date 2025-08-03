@@ -20,17 +20,18 @@ class HomeController extends GetxController {
   int get count => _count.value;
   set count(int value) => _count.value = value;
 
-  final _users = <Item>[].obs;
+  final _items = <Item>[].obs;
 
   /// 아이템 정보
-  List<Item> get users => _users;
-  set users(List<Item> value) => _users.value = value;
+  List<Item> get items => _items;
+  set items(List<Item> value) => _items.value = value;
 
   // 2. 생명주기 메서드
   @override
   void onInit() {
     super.onInit();
     loadUsers();
+    fetchRootData();
   }
 
   @override
@@ -59,7 +60,7 @@ class HomeController extends GetxController {
 
       if (result.isNotEmpty) {
         log('API fetchRootData Response: ${result.toList(growable: false)}');
-        users.addAll(result);
+        items = result;
         Get.snackbar(
           'Success',
           'Data fetched successfully',
