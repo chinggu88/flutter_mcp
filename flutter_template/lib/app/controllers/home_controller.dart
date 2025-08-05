@@ -61,19 +61,9 @@ class HomeController extends GetxController {
       if (result.isNotEmpty) {
         log('API fetchRootData Response: ${result.toList(growable: false)}');
         items = result;
-        Get.snackbar(
-          'Success',
-          'Data fetched successfully',
-          snackPosition: SnackPosition.BOTTOM,
-        );
       }
     } catch (e) {
       log('Failed to fetch data: ${e.toString()}');
-      Get.snackbar(
-        'Error',
-        'Failed to fetch data: ${e.toString()}',
-        snackPosition: SnackPosition.BOTTOM,
-      );
     } finally {
       loading = false;
     }
