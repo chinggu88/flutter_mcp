@@ -1,51 +1,10 @@
-# GetX 패턴 규칙 (GetX Patterns)
-```dart
-  // 1. 의존성 주입
-  static UserController to = Get.find();
+# GetX 패키지 규칙 (GetX Patterns)
 
-  // 2. 상태 변수 (타입별 obs 패턴)
-  // Bool 타입
-  final _isLoading = false.obs;
-  bool get isLoading => _isLoading.value;
-  set isLoading(bool value) => _isLoading.value = value;
-  
-  // String 타입
-  final _message = ''.obs;
-  String get message => _message.value;
-  set message(String value) => _message.value = value;
-  
-  // int 타입
-  final _count = 0.obs;
-  int get count => _count.value;
-  set count(int value) => _count.value = value;
-  
-  // double 타입
-  final _price = 0.0.obs;
-  double get price => _price.value;
-  set price(double value) => _price.value = value;
-  
-  // List 타입
-  final _users = <User>[].obs;
-  List<User> get users => _users.value;
-  set users(List<User> value) => _users.assignAll(value);
-  
-  
-  // Custom Object 타입
-  final _user = <User>().obs;
-  User get user => _user.value;
-  set user(User value) => _user.value = value;
-  
-  // DateTime 타입
-  final _selectedDate = Rx<DateTime?>(null);
-  DateTime? get selectedDate => _selectedDate.value;
-  set selectedDate(DateTime? value) => _selectedDate.value = value;
-```
-## 2. Binding 패턴
-
+## 1. Binding 패턴
 ### 페이지별 바인딩
 ```dart
-// Good - 페이지별 의존성 바인딩
-class HomeBinding extends Bindings {
+//  페이지별 의존성 바인딩
+class initBinding extends Bindings {
   @override
   void dependencies() {
     // Lazy 초기화 (사용할 때 생성)
